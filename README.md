@@ -334,7 +334,6 @@ TpsAHMED/
 | | Name | Program | Links |
 |--|------|---------|-------|
 | 👤 | **Ahmed Almuharaq** | M1 IoT | [GitHub](https://github.com/AhmedAlmuharaq) · [LinkedIn](https://www.linkedin.com/in/almuharaqa/) |
-| 👤 | **Malick Diop** | M1 IoT | Université Marie et Louis Pasteur |
 
 **Supervisor:** Prof. C. Guyeux
 **Institution:** Université Marie et Louis Pasteur, Montbéliard, France
