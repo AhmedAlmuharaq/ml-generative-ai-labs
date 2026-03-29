@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Environments
+.env
+.venv/
+venv/
+env/
+*.env
+
+# Data / Models (large files)
+*.joblib
+*.pkl
+*.faiss
+data/faiss_index/
+data/scaler.joblib
+data/xgb_model.json
+
+# Logs
+*.log
+streamlit.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Misc
+New Text Document.txt
