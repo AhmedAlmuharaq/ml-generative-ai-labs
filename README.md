@@ -11,7 +11,7 @@
 **M1 Internet of Things · Université Marie et Louis Pasteur, Montbéliard**
 **Academic Year 2025–2026 · Supervisor: Prof. C. Guyeux**
 
-[👤 GitHub Profile](https://github.com/AhmedAlmuharaq) · [🏥 Capstone Project →](https://github.com/AhmedAlmuharaq/medical-multiagent)
+[👤 GitHub Profile](https://github.com/AhmedAlmuharaq) · [🏥 Capstone Project →](https://github.com/AhmedAlmuharaq/medical-multiagent) · [🚆 Final Project →](https://github.com/AhmedAlmuharaq/TransportProject)
 
 </div>
 
@@ -231,6 +231,58 @@ streamlit run app.py
 ```
 
 > The app works **fully offline** without an API key — XGBoost prediction, rule-based alerts, and SHAP all run locally. Mistral is only needed for RAG Q&A and LLM explanations.
+
+---
+
+## 🚆 Final Project — IntelliTransport (Multi-Agent AI Transportation System)
+
+> **[🚆 View Full Project on GitHub](https://github.com/AhmedAlmuharaq/TransportProject)**
+
+A production-grade, real-time transportation intelligence platform — the culmination of all ML and Generative AI skills from this course applied to national transportation management in France.
+
+### What it does
+- **25 specialized AI agents** in 4 layers, orchestrated by LangGraph
+- **Multi-modal route planning** (car / train / bus) for any city in France using real APIs
+- **Live AI chat** with real Montbéliard Evolity bus and SNCF train knowledge
+- **CO2 tracking** and eco-recommendations for every journey
+- **Mission Control dashboard** — React + Leaflet.js dark map with real-time WebSocket updates
+
+### How it applies the cours_ia curriculum
+
+| cours_ia TP | Concept | Used in IntelliTransport |
+|-------------|---------|--------------------------|
+| TP1–TP5 Predictive | XGBoost, Classification, Regression | CongestionPredictionAgent, TravelTimeAgent |
+| TP6 Time Series | ARIMA, forecasting | TransitDelayAgent, ScheduleOptimizer |
+| TP7 SHAP | Explainability | Agent decision transparency |
+| TP8 K-Means | Clustering | CrowdDensityAgent |
+| TP9 Anomaly Detection | Isolation Forest | IncidentDetectorAgent |
+| TP1-gen | LLM API | Chat with Claude / Gemini / Mistral |
+| TP2-gen | LangChain | All 25 agents orchestration |
+| TP3-gen | RAG + ChromaDB | Historical transport knowledge base |
+| TP4-gen | Multi-Agent Systems | The complete 25-agent LangGraph architecture |
+
+### Tech Stack
+```
+Backend:   Python 3.11 · FastAPI · LangGraph · LangChain · ChromaDB
+AI/LLMs:   Claude Haiku · Gemini Flash · Mistral Small
+APIs:      SNCF GTFS · OSRM routing · Open-Meteo · Nominatim OSM · Evolity buses
+Frontend:  React 18 · Vite · Tailwind CSS · Leaflet.js
+Real-time: FastAPI WebSocket + SSE streaming
+```
+
+### Quick Start
+```bash
+git clone https://github.com/AhmedAlmuharaq/TransportProject.git
+cd TransportProject
+python -m venv .venv && .venv\Scripts\activate
+pip install -r backend/requirements.txt
+# Add API keys to .env
+.venv\Scripts\uvicorn backend.api.main:app --port 8000
+# In a second terminal:
+cd frontend && npm install && npm run dev
+```
+
+> Opens at **http://localhost:3000** — search any two cities in France to get real routes, weather, and departure times.
 
 ---
 
